@@ -42,7 +42,7 @@ const Login = () => {
     <div className="h-screen formClass overflow-y-hidden bg-gradient-to-b from-[#F9FBDF] via-[#E0F0E6]  to-[#CFECF0]">
       <div className="flex items-center mx-20">
         <div className="w-1/2 overflow-y-hidden">
-          <img src={Soldier} alt="alternate" className="w-2/3 h-3/4 mx-auto" />
+          <img src={Soldier} alt="alternate" className="w-4/5 h-3/4 mx-auto" />
         </div>
         <div className="flex h-screen w-50% justify-center content-center ml-32 px-auto z-10">
           <div className="flex flex-col w-full h-screen justify-center content-center mx-auto">
@@ -133,12 +133,12 @@ const Login = () => {
       <img
         src={plane}
         alt="bottom"
-        className="absolute z-10 h-[375px] right-[460px] top-[-50px] "
+        className="absolute z-10 h-[375px] right-[500px] top-[-50px] "
       />
       <img
         src={plus}
         alt="bottom"
-        className="absolute z-10 h-[200px] right-[180px] top-5"
+        className="absolute z-10 h-[160px] right-[140px] top-28"
       />
     </div>
   );
