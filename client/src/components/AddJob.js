@@ -1,4 +1,6 @@
+import axios from "axios";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
   title: "",
@@ -11,9 +13,30 @@ const initialState = {
 const AddJob = () => {
   const [formData, setFormData] = React.useState(initialState);
   const [showModal, setShowModal] = React.useState(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/postjob",
+        {
+          title: formData.title,
+          description: formData.description,
+          noOfOpenings: parseInt(formData.noOfOpenings),
+          location: formData.location,
+          salary: parseInt(formData.salary),
+        },
+        {
+          headers: {
+            "auth-token": localStorage.getItem("token"),
+          },
+        }
+      );
+      navigate(0);
+    } catch (err) {
+      console.log(err);
+    }
     setFormData(initialState);
     setShowModal(false);
   };
@@ -52,15 +75,15 @@ const AddJob = () => {
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div>
                       <label
-                        htmlFor="name"
+                        htmlFor="title"
                         className="block mb-2 text-sm font-medium text-neutralSecondary"
                       >
                         Job Title
                       </label>
                       <input
                         type="text"
-                        name="name"
-                        id="name"
+                        name="title"
+                        id="title"
                         className="border-b-2 text-gray-900 text-sm rounded-sm focus:outline-none focus:border-b-buttons block w-full p-2 bg-[#F0F0F0] placeholder-[#F0F0F0] "
                         placeholder="Enter task name"
                         required
@@ -70,15 +93,15 @@ const AddJob = () => {
                     <div className="grid grid-cols-2">
                       <div>
                         <label
-                          htmlFor="startDate"
+                          htmlFor="noOfOpenings"
                           className="block mb-2 text-sm font-medium text-neutralSecondary"
                         >
                           No. Of Openings
                         </label>
                         <input
                           type="test"
-                          name="startDate"
-                          id="startDate"
+                          name="noOfOpenings"
+                          id="noOfOpenings"
                           className="w-11/12 border-b-2 text-gray-900 text-sm rounded-sm focus:outline-none focus:border-b-buttons block p-2 bg-[#F0F0F0] placeholder-[#F0F0F0] "
                           placeholder="Enter task name"
                           required
@@ -87,15 +110,15 @@ const AddJob = () => {
                       </div>
                       <div>
                         <label
-                          htmlFor="endDate"
+                          htmlFor="salary"
                           className="block mb-2 text-sm font-medium text-neutralSecondary"
                         >
                           Salary
                         </label>
                         <input
                           type="test"
-                          name="endDate"
-                          id="endDate"
+                          name="salary"
+                          id="salary"
                           className="w-full border-b-2 text-gray-900 text-sm rounded-sm focus:outline-none focus:border-b-buttons block p-2 bg-[#F0F0F0] placeholder-[#F0F0F0] "
                           placeholder="Enter task name"
                           required
@@ -106,15 +129,15 @@ const AddJob = () => {
                     <div className="grid grid-cols-2">
                       <div>
                         <label
-                          htmlFor="startDate"
+                          htmlFor="location"
                           className="block mb-2 text-sm font-medium text-neutralSecondary"
                         >
                           Location
                         </label>
                         <input
                           type="test"
-                          name="startDate"
-                          id="startDate"
+                          name="location"
+                          id="location"
                           className="w-11/12 border-b-2 text-gray-900 text-sm rounded-sm focus:outline-none focus:border-b-buttons block p-2 bg-[#F0F0F0] placeholder-[#F0F0F0] "
                           placeholder="Enter task name"
                           required
@@ -129,7 +152,7 @@ const AddJob = () => {
                               name="draft"
                               type="checkbox"
                               value="true"
-                              onChange={handleChange}
+                              //   onChange={handleChange}
                               className="w-4 h-4 mt-20 border border-red rounded bg-red focus:ring-1 focus:ring-buttons bg-buttons border-buttons  focus:ring-offset-buttons required"
                             />
                           </div>
@@ -161,8 +184,9 @@ const AddJob = () => {
                       ></textarea>
                     </div>
                     <button
-                      className="w-24 bg-buttons text-white active:bg-bg4 font-semibold text-sm px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150"
+                      className="w-24 bg-buttons bg-black/90 text-white active:bg-bg4 font-semibold text-sm px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150"
                       type="submit"
+                      onClick={handleSubmit}
                     >
                       Add
                     </button>

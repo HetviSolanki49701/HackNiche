@@ -12,6 +12,7 @@ import Quiz from "./pages/Quiz";
 import Donate from "./pages/Donate";
 import CardHoverBlur from "./components/CardHoverBlur/CardHoverBlur";
 import Relocate from "./pages/Relocate";
+import PensionMgmnt from "./pages/PensionMgmnt";
 function App() {
   return (
     <div className="App font-ourfont flex">
@@ -29,6 +30,7 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/relocate" element={<Relocate />} />
+          <Route path="/pension" element={<PensionMgmnt />} />
         </Routes>
       </Router>
     </div>

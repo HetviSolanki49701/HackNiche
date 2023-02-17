@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:hackniche/pages/home_page.dart';
 
 import 'animated_drawer.dart';
+import 'main_child.dart';
 
 class AnimatedDrawerPage extends StatefulWidget {
   const AnimatedDrawerPage({super.key});
@@ -25,38 +26,39 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
         homePageYValue: 80,
         homePageAngle: -0.2,
         homePageSpeed: 250,
-        shadowXValue: 122,
-        shadowYValue: 110,
+        shadowXValue: 160,
+        shadowYValue: 90,
         shadowAngle: -0.275,
         shadowSpeed: 550,
         openIcon: Icon(Icons.menu_open, color: Color(0xFF1f186f)),
         closeIcon: Icon(Icons.arrow_back_ios, color: Color(0xFF1f186f)),
-        shadowColor: Color(0xFF4c41a3),
+        shadowColor: Color.fromARGB(255, 195, 193, 209),
         backgroundGradient: LinearGradient(
-          colors: [Color(0xFF4c41a3), Color(0xFF1f186f)],
+          colors: [Color(0xFF4c41a3), Color.fromARGB(255, 195, 193, 209)],
         ),
         menuPageContent: Padding(
-          padding: const EdgeInsets.only(top: 100.0, left: 15),
+          padding: const EdgeInsets.only(top: 200.0, left: 15),
           child: Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                FlutterLogo(
-                  size: MediaQuery.of(context).size.width / 4,
-                ),
+                // Image.asset('lib/images/.png'),
+                // FlutterLogo(
+                //   size: MediaQuery.of(context).size.width / 4,
+                // ),
                 Row(
                   children: [
                     Text(
-                      "FLUTTER",
+                      "Help",
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 26,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "HOLIC",
+                      "Centre",
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 26,
                           color: Colors.blue[200],
                           fontWeight: FontWeight.bold),
                     )
@@ -66,19 +68,15 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
                   padding: EdgeInsets.only(bottom: 40),
                 ),
                 Text(
-                  "Home Screen",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+                  "Child Care",
+                  style: TextStyle(color: Colors.white, fontSize: 24),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 20),
+                  padding: EdgeInsets.only(bottom: 24),
                 ),
                 Text(
-                  "Screen 2",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+                  "Home Page",
+                  style: TextStyle(color: Colors.white, fontSize: 24),
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 20),
@@ -100,7 +98,7 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
             ),
           ),
         ),
-        homePageContent: HomePage()
+        homePageContent: MainChild()
         // Scaffold(
         //     backgroundColor: color.AppColor.homePageBackground,
         //     body: SafeArea(

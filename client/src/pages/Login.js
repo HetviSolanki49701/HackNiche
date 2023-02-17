@@ -15,12 +15,8 @@ const Login = () => {
   const loginUser = async (e) => {
     e.preventDefault();
     try {
-      console.log(url + `login${role}`);
-      console.log(email, password);
       const res = await axios.post(url + `login${role}`, { email, password });
-      console.log(res);
       const token = res.data.authToken;
-      console.log(token);
       localStorage.setItem("token", token);
       localStorage.setItem("userType", role);
       if (role === "user") {
@@ -39,7 +35,7 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen formClass overflow-y-hidden bg-gradient-to-b from-[#F9FBDF] via-[#E0F0E6]  to-[#CFECF0]">
+    <div className="h-screen w-screen formClass overflow-y-hidden bg-gradient-to-b from-[#F9FBDF] via-[#E0F0E6]  to-[#CFECF0]">
       <div className="flex items-center mx-20">
         <div className="w-1/2 overflow-y-hidden">
           <img src={Soldier} alt="alternate" className="w-4/5 h-3/4 mx-auto" />

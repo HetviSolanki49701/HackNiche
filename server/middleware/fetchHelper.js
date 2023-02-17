@@ -10,7 +10,6 @@ const fetchhelper = (req, res, next) => {
   try {
     const data = jwt.verify(token, JWT_SECRET);
     req.helper = data.helper;
-    console.log(data.helper.id);
     next();
   } catch (error) {
     res.status(401).send({ error: "Error occured" });

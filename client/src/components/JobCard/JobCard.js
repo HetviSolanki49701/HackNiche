@@ -13,12 +13,10 @@ const JobCard = (props) => {
           {props.role}
         </div>
         <div className="text-left font-normal text-purple text-xs px-1">
-          Stipend: {props.salary}
+          Stipend: Rs. {props.salary}
         </div>
         <div className="text-left font-thin text-black text-xs mx-1">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
-          sequi quas quos aperiam, repudiandae voluptas, accusamus similique
-          quaerat.
+          {props.desc}
         </div>
         <div className="flex justify-between">
           <div className="bg-[#dfcef7] w-16 h-1/5 rounded-lg mt-5 mx-1 px-1 border border-purple">
