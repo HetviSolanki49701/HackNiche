@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import axios from "axios";
-import Soldier from "../assets/Soldier.jpg";
+import Soldier from "../assets/Soldier.png";
 import plane from '../assets/plane.png'
 import plus from '../assets/plus.svg'
 const Login = () => {
@@ -40,10 +40,10 @@ const Login = () => {
     //   };
 
     return (
-        <div className="h-screen formClass overflow-y-hidden">
+        <div className="h-screen formClass overflow-y-hidden bg-gradient-to-b from-[#F9FBDF] via-[#E0F0E6]  to-[#CFECF0]">
             <div className="flex">
                 <div className="w-1/2 overflow-y-hidden">
-                    <img src={Soldier} alt="alternate" className="w-auto h-3/4 m-8" />
+                    <img src={Soldier} alt="alternate" className="w-auto h-full m-8 " />
                 </div>
                 <div className="flex-1 h-screen w-50% justify-center content-center ml-12 z-10">
                     <div className="flex flex-col w-full h-screen justify-center content-center">
@@ -122,7 +122,7 @@ const Login = () => {
                                             //   onClick={(e) => {
                                             // loginUser(e);
                                             //   }}
-                                            className="flex-shrink-0 bg-gradient-to-r from-btn-left to-btn-right text-sm text-white py-3 px-1 rounded-3xl w-1/2 font-medium bg-[#0a5cf5] hover:bg-blue-700"
+                                            className="flex-shrink-0 text-white py-3 px-1 rounded-3xl w-1/2 font-medium bg-[#91B199] hover:bg-blue-700"
                                         >
                                             Sign In
                                         </button>
