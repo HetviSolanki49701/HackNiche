@@ -11,3 +11,14 @@ button.btn-primary {
 /* img.backgroundimage{
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('../src/assets/bg.jpg');
   } */
+
+/* .bgimg:before{
+  bg-[url('assets/blobBg.svg')] bg-no-repeat bg-cover
+  background-image: url("assets/blobBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  content: ' ';
+  position: absolute;
+  display: block;
+} */

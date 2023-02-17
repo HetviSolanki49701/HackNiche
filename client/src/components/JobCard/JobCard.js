@@ -3,7 +3,7 @@ import React from 'react'
 const JobCard = (props) => {
     return (
         <div className='m-2'>
-            <div className="w-full h-11/12 p-5 rounded-2xl bg-[#ffffff] shadow-md ">
+            <div className="w-full h-11/12 p-5 rounded-2xl bg-[#ffffff] shadow-primary-sd ">
                 <div className="flex justify-between">
                     <div className="text-[#808080] text-left text-sm px-2">
                         {props.company}
