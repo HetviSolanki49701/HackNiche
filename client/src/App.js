@@ -11,6 +11,7 @@ import PostJobs from "./pages/PostJob";
 import Quiz from "./pages/Quiz";
 import Donate from "./pages/Donate";
 import PensionMgmnt from "./pages/PensionMgmnt";
+import Consult from "./pages/Consult";
 function App() {
   return (
     <div className="App font-ourfont flex">
@@ -28,6 +29,7 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/pension" element={<PensionMgmnt />} />
+          <Route path="/consult" element={<Consult />} />
         </Routes>
       </Router>
     </div>
