@@ -1,0 +1,67 @@
+.main {background: #fff;}
+
+.card {
+	background: #000;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+	box-shadow: 0px 10px 70px rgba(0, 0, 0, 0.15);
+}
+
+.main .card-header{
+	height: 35%;
+	width: 100%;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.main .header-img{
+	height: 100%;
+	width: 100%;
+	background: url(https://source.unsplash.com/y3aP9oo9Pjc/500x500) left center;
+	background-size: 100%;
+	border-radius: inherit;
+	transition: all ease-in-out .4s;
+}
+
+.main .card:hover .header-img{
+	transform: scale(1.25) rotate(2deg);
+}
+
+.main .card-title {
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 15px;
+}
+
+.main .card-title h1 {
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height: 30px;
+	padding: 0px;
+}
+
+.main .btn {
+	padding: 10px 20px;
+	position: absolute;
+	width: 60%;
+	left: 50%;
+	bottom: 30px;
+	transform: translate(-50%, 0%);
+	border: 1px solid turquoise;
+	border-radius: 100px;
+	text-align: center;
+	transition: all ease-in-out .2s;
+	cursor: pointer;
+}
+
+.main .btn:hover {
+    background: turquoise;
+    color: #fff;
+}
