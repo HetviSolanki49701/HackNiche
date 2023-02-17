@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 import 'package:hackniche/colors.dart' as color;
+import 'package:hackniche/pages/main_child.dart';
 import '../widgets/data.dart';
 
 class HomePage extends StatefulWidget {
@@ -101,6 +102,7 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () {
+                        Get.to(() => MainChild());
                         // if (index == 1) {
                         //   Get.to(() => EcoFriendly());
                         // } else if (index == 2) {
@@ -152,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                                         planets[index].name,
                                         style: TextStyle(
                                           fontFamily: 'Avenir',
-                                          fontSize: 34,
+                                          fontSize: 30,
                                           color: const Color(0xff47455f),
                                           fontWeight: FontWeight.w900,
                                         ),

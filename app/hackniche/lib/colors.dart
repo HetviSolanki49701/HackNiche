@@ -30,4 +30,9 @@ class AppColor {
   static Color navigationColor = Color(0xFF6751B5);
   static Color gradientStartColor = Color(0xFF0050AC);
   static Color gradientEndColor = Color(0xFF9354B9);
+  static const bgColor = Color(0xFF0C1B3A);
+  static const bgColor2 = Color(0xff162544);
+  static const secondaryColor = Color(0xFF242430);
+  static const lightGreen = Color(0xFF58CB79);
+  static const defaultPadding = 20.0;
 }

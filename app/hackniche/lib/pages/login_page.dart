@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_field, sort_child_properties_last, avoid_print, unused_local_variable, unused_import, prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, unused_field, sort_child_properties_last, avoid_print, unused_local_variable, unused_import, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables
 
 import 'dart:convert';
 import 'dart:ffi';
@@ -72,6 +72,12 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Color(0xffb6ecfa),
       body: SafeArea(
         child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Color(0xFFf9fbdf), Color(0xFFcfecf0)],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  stops: [0.3, 0.7])),
           height: 800,
           child: Stack(
             children: [
