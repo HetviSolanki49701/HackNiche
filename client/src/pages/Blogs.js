@@ -5,7 +5,7 @@ import blog2 from '../assets/blog2.jpg'
 import blog1 from '../assets/blog1.jpg'
 const Blogs = () => {
     return (
-        <div className='bg-gradient-to-b from-[#F9FBDF] via-[#E0F0E6]  to-[#CFECF0] min-h-screen h-full'>
+        <div className='bg-[url("assets/blobBg.svg")] bg-no-repeat bg-cover min-h-screen h-full'>
         <div className='pb-16'>
             <div className='text-center text-4xl py-8 font-bold '>
                 Blogs

@@ -8,6 +8,8 @@ import Maps from "./pages/Maps";
 import Jobs from "./pages/Jobs";
 import Sidebar from "./components/Sidebar/Sidebar";
 import PostJobs from "./pages/PostJob";
+import Quiz from "./pages/Quiz";
+import Donate from "./pages/Donate";
 function App() {
   return (
     <div className="App font-ourfont flex">
@@ -15,7 +17,6 @@ function App() {
         {localStorage.getItem("token") && <Sidebar />}
         <Routes>
           <Route path="/login" element={<Login />} />
-
           <Route path="/register" element={<Register />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/schemes" element={<Schemes />} />
@@ -23,6 +24,8 @@ function App() {
           <Route path="/maps" element={<Maps />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/postjobs" element={<PostJobs />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
       </Router>
     </div>
