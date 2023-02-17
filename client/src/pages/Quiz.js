@@ -34,7 +34,7 @@ const Quiz = () => {
         <div className="text-xl font-normal text-slate-400 my-3 mb-8">
           Please note, all fields are required.
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             1. Little interest or pleasure in doing things
           </div>
@@ -53,7 +53,7 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             2. Feeling down, depressed, or hopeless
           </div>
@@ -72,7 +72,7 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             3. Trouble falling or staying asleep, or sleeping too much
           </div>
@@ -91,7 +91,7 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             4. Feeling tired or having little energy
           </div>
@@ -110,7 +110,7 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             5. Poor appetite or overeating
           </div>
@@ -129,7 +129,7 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             6. Feeling bad about yourself - or that you are a failure or have
             let yourself or your family down
@@ -149,7 +149,7 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             7. Trouble concentrating on things, such as reading the newspaper or
             watching television
@@ -169,7 +169,7 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             8. Moving or speaking so slowly that other people could have noticed
           </div>
@@ -188,7 +188,7 @@ const Quiz = () => {
             </button>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-16">
           <div className="text-2xl text-slate-700">
             Lastly, tell us something more about how you have been feeling in
             your own words.
