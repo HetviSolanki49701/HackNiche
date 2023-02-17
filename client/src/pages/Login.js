@@ -15,12 +15,8 @@ const Login = () => {
   const loginUser = async (e) => {
     e.preventDefault();
     try {
-      console.log(url + `login${role}`);
-      console.log(email, password);
       const res = await axios.post(url + `login${role}`, { email, password });
-      console.log(res);
       const token = res.data.authToken;
-      console.log(token);
       localStorage.setItem("token", token);
       localStorage.setItem("userType", role);
       if (role === "user") {
