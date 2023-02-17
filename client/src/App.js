@@ -7,6 +7,7 @@ import Blogs from "./pages/Blogs";
 import Maps from "./pages/Maps";
 import Jobs from "./pages/Jobs";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Donate from "./pages/Donate";
 function App() {
   return (
     <div className="App font-ourfont flex">
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Blogs" element={<Blogs />} />
           <Route path="/maps" element={<Maps />} />
           <Route path="/jobs" element={<Jobs />} />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
       </Router>
     </div>
