@@ -39,7 +39,7 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen formClass overflow-y-hidden bg-gradient-to-b from-[#F9FBDF] via-[#E0F0E6]  to-[#CFECF0]">
+    <div className="h-screen w-screen formClass overflow-y-hidden bg-gradient-to-b from-[#F9FBDF] via-[#E0F0E6]  to-[#CFECF0]">
       <div className="flex items-center mx-20">
         <div className="w-1/2 overflow-y-hidden">
           <img src={Soldier} alt="alternate" className="w-4/5 h-3/4 mx-auto" />
