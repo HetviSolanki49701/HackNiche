@@ -54,6 +54,16 @@ dependencies:
   html_character_entities: ^0.1.2+4
   meta: ^1.2.4
   intl: ^0.18.0
+  google_nav_bar: ^5.0.6
+  animated_icon: ^0.0.4
+  youtube_player_flutter: ^8.1.2
+  carousel_slider: ^4.2.1
+  curved_carousel: ^0.0.7
+  flutter_slidable: ^2.0.0
+  flutter_swipable: ^1.2.1
+  checkmark: ^0.0.2+1
+  mobile_scanner: ^3.0.0
+  slide_to_act: ^2.0.1
 
 dev_dependencies:
   flutter_test:
