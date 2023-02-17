@@ -7,6 +7,7 @@ import Blogs from "./pages/Blogs";
 import Maps from "./pages/Maps";
 import Jobs from "./pages/Jobs";
 import Sidebar from "./components/Sidebar/Sidebar";
+import PostJobs from "./pages/PostJob";
 function App() {
   return (
     <div className="App font-ourfont flex">
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Blogs" element={<Blogs />} />
           <Route path="/maps" element={<Maps />} />
           <Route path="/jobs" element={<Jobs />} />
+          <Route path="/postjobs" element={<PostJobs />} />
         </Routes>
       </Router>
     </div>
