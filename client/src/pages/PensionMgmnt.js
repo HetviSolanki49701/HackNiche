@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BarChart from "../components/Pension/BarChart";
 import { UserData } from "../components/Pension/Data";
 import PieChart from "../components/Pension/PieChart";
 import PensionItem from "../components/Pension/PensionItem";
 import Chart from "chart.js/auto";
+import axios from "axios";
 
 const PensionMgmnt = () => {
-  const [pensions, setPensions] = useState([])
+  const [pensions, setPensions] = useState([]);
   const [userData, setUserData] = useState({
     labels: UserData.map((data) => data.month),
     datasets: [
@@ -16,6 +17,22 @@ const PensionMgmnt = () => {
       },
     ],
   });
+
+  useEffect(() => {
+    async function getPensions() {
+      try {
+        const res = await axios.get("http://localhost:5000/pensions", {
+          headers: {
+            "auth-token": localStorage.getItem("token"),
+          },
+        });
+        setPensions(res.data.pension);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    getPensions();
+  }, []);
 
   return (
     // <div className="font-bold text-xl">
@@ -49,29 +66,34 @@ const PensionMgmnt = () => {
           </div>
         </div>
         <div className="mr-10 bg-slate-200 w-full mt-16 h-[120vh]">
-        <table class="w-full text-sm text-left  text-gray-400 table-fixed">
+          <table class="w-full text-sm text-left  text-gray-400 table-fixed">
             <thead class="text-base bg-gray-700 text-gray-50 font-extralight">
               <tr>
-                  <th scope="col" class="py-3 px-6 w-[35%] text-left">
-                      Available Pensions
-                  </th>
-                  <th scope="col" class="py-3 px-6 w-[50%]">
-                      Description
-                  </th>
-                  <th scope="col" class="py-3 px-6 w-[20%]">
-                      Status
-                  </th>
-                  <th scope="col" class="py-3 px-6 w-[10%]">
-                      
-                  </th>
+                <th scope="col" class="py-3 px-6 w-[35%] text-left">
+                  Available Pensions
+                </th>
+                <th scope="col" class="py-3 px-6 w-[50%]">
+                  Description
+                </th>
+                <th scope="col" class="py-3 px-6 w-[20%]">
+                  Status
+                </th>
+                <th scope="col" class="py-3 px-6 w-[10%]"></th>
               </tr>
-          </thead>
-          <tbody>
-          {pensions.map((pension) => {
-              return ( <PensionItem key={pension._id} scheme = {pension.scheme} desc = {pension.desc} apply = {pension.apply} />);
-            })}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {pensions.map((pension) => {
+                return (
+                  <PensionItem
+                    key={pension._id}
+                    scheme={pension.title}
+                    desc={pension.description}
+                    apply={pension.status}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

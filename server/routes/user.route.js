@@ -83,6 +83,8 @@ router.post(
   }
 );
 
+// router.get
+
 // router.get("/fetchAllMedicinesUser", fetchUser, async (req, res) => {
 //   try {
 //     let meds = await medicines.find({
