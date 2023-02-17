@@ -2,7 +2,7 @@ import React from "react";
 import "./GlassmorphismCard.css";
 import Tilt from "react-vanilla-tilt";
 import Iframe from "react-iframe";
-const GlassmorphismCard = () => {
+const   GlassmorphismCard = () => {
   return (
     <div className="container">
       <Tilt className="card" options={{ speed: 400, max: 25 }}>
@@ -49,7 +49,7 @@ const GlassmorphismCard = () => {
           </div>
           <a
             href="https://www.youtube.com/embed/ssGhAqPDPD8"
-            className="text-sm underline underline-offset-2"
+            className="text-sm underline underline-offset-2 p-9" 
           >
             Read More
           </a>

@@ -96,11 +96,12 @@
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  min-height: 100vh;
+  min-height: 100%;
   /* position: absolute; */
-  /* min-width: 100px; */
+  /* min-width: 100px; %
   /* background: #232c33; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: sticky;
 }
