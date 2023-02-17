@@ -5,8 +5,8 @@ import atal from '../assets/atal.svg'
 import nsc from '../assets/nsc.webp'
 const Schemes = () => {
   return (
-    <div className='w-full bg-gradient-to-b from-[#F9FBDF] via-[#E0F0E6]  to-[#CFECF0] min-h-screen h-full'>
-        <div className='text-center text-4xl py-8 font-bold '>Register</div>
+    <div className='w-full bg-[url("assets/blobBg.svg")] bg-no-repeat bg-cover min-h-screen h-full'>
+        <div className='text-center text-4xl py-8 font-bold '>Schemes</div>
     <div className='flex justify-around'>
         <CardHover img={ppf} heading="PPF"/>
         <CardHover img={atal} heading="Atal Yojana"/>

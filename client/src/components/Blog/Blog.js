@@ -2,7 +2,7 @@ import React from 'react'
 
 const Blog = (props) => {
   return (
-    <div className='bg-[#ffffff1a] shadow-md flex rounded-md mx-36 my-8'>
+    <div className='bg-white shadow-md flex rounded-lg mx-36 my-8'>
         <img src={props.img} alt="" className='w-72 rounded-l-md'/>
         <div className='pl-8 pt-8'>
             <div className='text-2xl font-semibold'>{props.heading}</div>
