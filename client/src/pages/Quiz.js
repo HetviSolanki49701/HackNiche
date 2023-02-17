@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import quiz_img from "../assets/quiz_timeline.png";
+import GetSentiment from "../components/GetSentiment";
 
-const Quiz = () => { 
+const Quiz = () => {
   const [text, setText] = useState("");
+
   const getSentiment = async () => {
     console.log(text);
     const response = await axios.get(
@@ -14,8 +16,9 @@ const Quiz = () => {
         },
       }
     );
-    console.log(response.data.sentiment);
+    return response.data;
   };
+
   return (
     <div className="min-h-screen w-screen">
       <div className="w-[70px] h-[173vh] bg-[#2b343b] absolute top-[46.5rem] left-0"></div>
@@ -200,12 +203,7 @@ const Quiz = () => {
             }}
           />{" "}
           <br />
-          <button
-            className="p-3 mt-3 px-7 bg-slate-300 text-slate-800 mr-5 hover:bg-slate-400 rounded-md text-lg"
-            onClick={getSentiment}
-          >
-            Submit
-          </button>
+          <GetSentiment get={getSentiment} />
         </div>
       </div>
     </div>
