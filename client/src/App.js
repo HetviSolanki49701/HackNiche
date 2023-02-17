@@ -8,7 +8,7 @@ import Maps from "./pages/Maps";
 import Sidebar from "./components/Sidebar/Sidebar";
 function App() {
   return (
-    <div className="App font-ourfont">
+    <div className="App font-ourfont flex">
       <Router>
         {localStorage.getItem("token") && <Sidebar />}
         <Routes>
