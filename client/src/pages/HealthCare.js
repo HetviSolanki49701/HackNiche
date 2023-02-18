@@ -14,8 +14,8 @@ const HealthCare = () => {
     }
 
   return (
-    <div className='bg-[url("assets/blobBg.svg")] bg-no-repeat bg-cover min-h-screen h-full w-screen grid grid-cols-4 items-center px-16'>
-        <Tilt className="card h-96 col-start-2" options={{ speed: 400, max: 25 }} onClick={handleOnClick1}>
+    <div className='bg-[url("assets/blobBg.svg")] bg-no-repeat bg-cover min-h-screen h-full w-screen flex justify-evenly  items-center px-16'>
+        <Tilt className="card h-96 " options={{ speed: 400, max: 25 }} onClick={handleOnClick1}>
             <img src={img1} alt="" className='p-8'/>
             <div className='text-center text-3xl font-semibold pb-10'>Counsult a Doctor</div>
         </Tilt>
