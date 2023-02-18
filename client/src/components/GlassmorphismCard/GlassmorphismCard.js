@@ -26,7 +26,7 @@ const   GlassmorphismCard = () => {
             href="https://www.youtube.com/embed/ssGhAqPDPD8"
             className="text-sm underline underline-offset-2"
           >
-            Read More
+            Know More
           </a>
         </div>
       </Tilt>
@@ -51,7 +51,7 @@ const   GlassmorphismCard = () => {
             href="https://www.youtube.com/embed/ssGhAqPDPD8"
             className="text-sm underline underline-offset-2 p-9" 
           >
-            Read More
+            Know More
           </a>
         </div>
       </Tilt>
@@ -76,7 +76,7 @@ const   GlassmorphismCard = () => {
             href="https://www.youtube.com/embed/ssGhAqPDPD8"
             className="text-sm underline underline-offset-2"
           >
-            Read More
+            Know More
           </a>
         </div>
       </Tilt>
