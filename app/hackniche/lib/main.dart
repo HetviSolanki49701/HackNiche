@@ -7,6 +7,9 @@ import 'package:hackniche/pages/jobs_detail.dart';
 import 'package:hackniche/pages/login_page.dart';
 import 'package:hackniche/pages/main_child.dart';
 
+import 'pages/articles.dart';
+import 'pages/benefits.dart';
+import 'pages/nearby_schools.dart';
 import 'pages/doctor_user.dart';
 import 'pages/education.dart';
 import 'pages/get_started.dart';
@@ -33,6 +36,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: AppointmentUser());
+        home: DoctorUser());
   }
 }
