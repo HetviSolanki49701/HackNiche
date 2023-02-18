@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:hackniche/colors.dart' as color;
 import '../widgets/work_categories.dart';
 
 class DetailPage extends StatelessWidget {
@@ -8,6 +8,7 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: color.AppColor.bgColor,
       child: Column(
         children: [
           Container(
@@ -22,15 +23,15 @@ class DetailPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 60),
-                Image(image: AssetImage('files/images/google.png'), height: 80),
+                Image(image: AssetImage('lib/images/school1.jpeg'), height: 80),
                 SizedBox(height: 30),
                 Text(
-                  'UX Designer',
+                  'Teacher',
                   style: TextStyle(color: Colors.white, fontSize: 23),
                 ),
                 SizedBox(height: 5),
                 Text(
-                  'Google',
+                  'Army School',
                   style: TextStyle(color: Colors.white54, fontSize: 18),
                 ),
                 SizedBox(height: 60),
@@ -41,7 +42,7 @@ class DetailPage extends StatelessWidget {
                       label: 'Full Time',
                     ),
                     WorkCategories(
-                      label: 'Design',
+                      label: 'Teaching',
                     ),
                     WorkCategories(
                       label: 'Junior',
@@ -71,30 +72,30 @@ class DetailPage extends StatelessWidget {
           ),
           SizedBox(height: 25),
           Text(
-            '(1)  Master’s Degree in Design and Computer Science,\n       Computer interactions, or a releated field',
+            '(1)  Master’s Degree in Design and Computer Science,\n       ',
             style: TextStyle(color: Colors.white70, fontSize: 14),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 25),
           Text(
             '(2)  Master’s Degree in Design and Computer Science,\n       Computer interactions, or a releated field',
             style: TextStyle(color: Colors.white70, fontSize: 14),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 25),
           Text(
-            '(3)  Master’s Degree in Design and Computer Science,\n       Computer interactions, or a releated field',
+            '(3)   Having Computer interactions, or a releated field',
             style: TextStyle(color: Colors.white70, fontSize: 14),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 25),
           Text(
             '(4)  Master’s Degree in Design and Computer Science,\n       Computer interactions, or a releated field',
             style: TextStyle(color: Colors.white70, fontSize: 14),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 25),
           Text(
-            '(5)  Master’s Degree in Design and Computer Science,\n       Computer interactions, or a releated field',
+            '(5)   Have a Computer interaction, or a releated field',
             style: TextStyle(color: Colors.white70, fontSize: 14),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 25),
           Text(
             '(6)  Master’s Degree in Design and Computer Science,\n       Computer interactions, or a releated field',
             style: TextStyle(color: Colors.white70, fontSize: 14),
