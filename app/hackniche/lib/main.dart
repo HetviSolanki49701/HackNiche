@@ -6,6 +6,7 @@ import 'package:hackniche/pages/animated_drawer.dart';
 import 'package:hackniche/pages/jobs_detail.dart';
 import 'package:hackniche/pages/login_page.dart';
 import 'package:hackniche/pages/main_child.dart';
+import 'package:hackniche/pages/registration_page.dart';
 import 'package:hackniche/pages/silver_bar_chart.dart';
 
 import 'pages/addfriends.dart';
@@ -38,6 +39,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: DoctorUser());
+        home: GetStarted());
   }
 }
