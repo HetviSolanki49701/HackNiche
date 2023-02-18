@@ -4,11 +4,13 @@ import 'package:animated_drawer/views/animated_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:hackniche/pages/doctor_user.dart';
 import 'package:hackniche/pages/nearby_schools.dart';
 import 'package:hackniche/pages/get_started.dart';
 import 'package:hackniche/pages/home_page.dart';
 import 'package:hackniche/colors.dart' as color;
 
+import 'benefits.dart';
 import 'login_page.dart';
 
 class MainChild extends StatefulWidget {
@@ -49,9 +51,9 @@ class _MainChildState extends State<MainChild> {
                 currentIndex = index;
                 HapticFeedback.lightImpact();
                 if (index == 1) {
-                  Get.to(() => DoctorSoldier());
+                  Get.to(() => DoctorUser());
                 } else if (index == 2) {
-                  Get.to(() => AnimatedDrawer());
+                  Get.to(() => Benefits());
                 } else if (index == 3) {
                   Get.to(() => HomePage());
                 }
@@ -715,16 +717,16 @@ class _MainChildState extends State<MainChild> {
 
   List<IconData> listOfIcons = [
     Icons.home_rounded,
-    Icons.favorite_rounded,
-    Icons.settings_rounded,
+    Icons.medical_services_rounded,
+    Icons.account_balance_outlined,
     Icons.person_rounded,
   ];
 
   List<String> listOfStrings = [
     'Fitness',
-    'Therapy',
-    'Settings',
-    'Account',
+    'Doctors',
+    'Benefits',
+    'Blogs',
   ];
 }
 
