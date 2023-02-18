@@ -19,7 +19,7 @@ class _MapScreenState extends State<MapScreen> {
   late GoogleMapController mapController; //contrller for Google map
   final Set<Marker> markers =
       new Set(); //markers for google map; //markers for google map
-  static const LatLng showLocation = LatLng(19.126188, 72.834575);
+  static const LatLng showLocation = LatLng(19.11, 72.84);
 
   Set<Marker> getmarkers() {
     //markers to place on map
@@ -27,12 +27,12 @@ class _MapScreenState extends State<MapScreen> {
       markers.add(Marker(
         //add first marker
         markerId: MarkerId("1"),
-        position: showLocation, //position of marker
+        position: LatLng(19.1127312, 72.847886), //position of marker
         infoWindow: InfoWindow(
           //popup info
-          title: 'Regreen Recycling Pvt Ltd',
+          title: 'Momento',
           snippet:
-              '2nd Floor Unit No.205 Ganeshwadi CHS LTD, BLDG No.5, near Akruti Star, M.I.D.C, Andheri East, Mumbai',
+              '16-a/ Kalpita Enclave, Sahar Road, Andheri East, Andheri East, Mumbai',
         ),
         icon: BitmapDescriptor.defaultMarker, //Icon for Marker
       ));
@@ -40,12 +40,12 @@ class _MapScreenState extends State<MapScreen> {
       markers.add(Marker(
         //add second marker
         markerId: MarkerId("2"),
-        position: LatLng(19.1180364, 72.87068719999999), //position of marker
+        position: LatLng(19.1046375, 72.8451591), //position of marker
         infoWindow: InfoWindow(
           //popup info
-          title: 'Regreen Recycling Pvt Ltd',
+          title: 'Zee Novelties',
           snippet:
-              '2nd Floor Unit No.205 Ganeshwadi CHS LTD, BLDG No.5, near Akruti Star, M.I.D.C, Andheri East, Mumbai',
+              'near Parle Biscuit Factory, Shop no. 101, Anand Amrut, near Parle Biscuit Factory, Tejpal Road, Mumbai',
         ),
         icon: BitmapDescriptor.defaultMarker, //Icon for Marker
       ));
@@ -53,48 +53,48 @@ class _MapScreenState extends State<MapScreen> {
       markers.add(Marker(
         //add third marker
         markerId: MarkerId("3"),
-        position: LatLng(19.0715657, 72.8691727), //position of marker
+        position: LatLng(19.1002164, 72.845686), //position of marker
         infoWindow: InfoWindow(
           //popup info
-          title:
-              'Ecotech Recycling- E waste recycling Mumbai, E-Waste Recycling, E Waste Management in Pune India',
+          title: 'Relaince smart Bazaar',
           snippet:
-              '301, 3rd Floor, Bldg. No. 11, Commercial Tower, near Trade Center, Bandra Kurla Complex, Bandra East, Mumbai',
+              'Parle Square Mall, near Dinanath Mangeshkar Natyagruha, Monghibai Road, Vile Parle East, Vile Parle, Mumbai',
         ),
         icon: BitmapDescriptor.defaultMarker, //Icon for Marker
       ));
       markers.add(Marker(
         //add third marker
         markerId: MarkerId("4"),
-        position: LatLng(19.112175, 73.0224186), //position of marker
+        position: LatLng(19.0982557, 72.8443767), //position of marker
         infoWindow: InfoWindow(
           //popup info
-          title: 'GOGREENRECYCLING',
-          snippet: 'A-8, Electronic Sadan, Mahape Midc Rd, Mahape, Navi Mumbai',
+          title: 'Parlekar Masalas Super Market',
+          snippet:
+              'Shop : 15/16, Vanmalidas Compound, 53-a, Tejpal Road, Vile Parle East, Mumbai',
         ),
         icon: BitmapDescriptor.defaultMarker, //Icon for Marker
       ));
       markers.add(Marker(
         //add third marker
         markerId: MarkerId("5"),
-        position: LatLng(19.165308, 72.94274399999999), //position of marker
+        position: LatLng(19.1099593, 72.8332813), //position of marker
         infoWindow: InfoWindow(
           //popup info
-          title: 'Recycle Impact',
+          title: 'Priya Super Stores',
           snippet:
-              '206, Raja Industrial Estate, P.K. Road, Mulund West, Mumbai',
+              'Shop Number 1 & 2, BMC Market, North South Road Number 6, JVPD Scheme, Vile Parle West, Mumbai',
         ),
         icon: BitmapDescriptor.defaultMarker, //Icon for Marker
       ));
       markers.add(Marker(
         //add third marker
         markerId: MarkerId("6"),
-        position: LatLng(19.131447, 72.862443), //position of marker
+        position: LatLng(19.1109778, 72.8410973), //position of marker
         infoWindow: InfoWindow(
           //popup info
-          title: 'Spas Recycling Pvt Ltd',
+          title: 'Gupta Chana Shop',
           snippet:
-              'Unit No.7,Hema Industrial Estate,Sarvodaya Nagar,, MHB Colony Rd, Meghwadi, Indira Nagar, Jogeshwari East, Mumbai',
+              '4R6R+9CX, Swami Vivekananda Road, New Sarvottam Society, Irla Bridge, Vile Parle West, Mumbai',
         ),
         icon: BitmapDescriptor.defaultMarker, //Icon for Marker
       ));
@@ -109,7 +109,7 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Nearby Recycling Shops"),
+        title: Text("Nearby Distribution Centers"),
         backgroundColor: Color.fromARGB(255, 64, 255, 182),
       ),
       body: GoogleMap(
