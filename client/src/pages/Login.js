@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Soldier from "../assets/Soldier.png";
 import plane from "../assets/plane.png";
 import plus from "../assets/plus.svg";
-const Login = () => {
+const Login = ({setMe}) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,10 +20,9 @@ const Login = () => {
       localStorage.setItem("token", token);
       localStorage.setItem("userType", role);
       if (role === "user") {
-        alert(role);
-        // navigate("/");
+        setMe(true);
+        navigate("/pension");
       } else if (role === "helper") {
-        alert(role);
         // navigate("/");
       }
     } catch (err) {

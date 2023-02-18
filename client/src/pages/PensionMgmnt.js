@@ -5,8 +5,10 @@ import PieChart from "../components/Pension/PieChart";
 import PensionItem from "../components/Pension/PensionItem";
 import Chart from "chart.js/auto";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const PensionMgmnt = () => {
+  const navigate = useNavigate();
   const [pensions, setPensions] = useState([]);
   const [userData, setUserData] = useState({
     labels: UserData.map((data) => data.month),
@@ -19,6 +21,7 @@ const PensionMgmnt = () => {
   });
 
   useEffect(() => {
+    // navigate(0)
     async function getPensions() {
       try {
         const res = await axios.get("http://localhost:5000/pensions", {

@@ -16,13 +16,18 @@ import PensionMgmnt from "./pages/PensionMgmnt";
 import Consult from "./pages/Consult";
 import Schools from "./pages/Schools";
 import HousePrice from "./components/HousePrice";
+import { useEffect, useState } from "react";
 function App() {
+
+  const [me, setMe] = useState(false);
+
+  useEffect(()=>{}, [me])
   return (
     <div className="App font-ourfont flex">
       <Router>
-        {localStorage.getItem("token") && <Sidebar />}
+        {(me || localStorage.getItem("token")) && <Sidebar />}
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login setMe={setMe} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/schemes" element={<Schemes />} />
