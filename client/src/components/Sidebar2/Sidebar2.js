@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./sidebar.css";
+import "./sidebar2.css";
 import { useNavigate } from "react-router-dom";
-const Sidebar = ({ setMe }) => {
+const Sidebar2 = ({ setMe }) => {
   const [selected, setSelected] = useState("Child-Care");
   const navigate = useNavigate();
 
@@ -114,4 +114,4 @@ const Sidebar = ({ setMe }) => {
   );
 };
 
-export default Sidebar;
+export default Sidebar2;

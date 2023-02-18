@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App font-ourfont flex">
       <Router>
-        {(me || localStorage.getItem("token")) && <Sidebar />}
+        {(me || localStorage.getItem("token")) && <Sidebar setMe={setMe} />}
         <Routes>
           <Route path="/login" element={<Login setMe={setMe} />} />
           <Route path="/register" element={<Register />} />

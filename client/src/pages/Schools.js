@@ -16,7 +16,6 @@ const center = { lat: 19.11, lng: 72.84 };
 
 const Schools = () => {
   const { isLoaded } = useJsApiLoader({
-    // googleMapsApiKey: "AIzaSyD9VI4OdMbtz9zNyDdGWL-Q9dM_qv_hW_4",
     libraries: ["places"],
   });
 
