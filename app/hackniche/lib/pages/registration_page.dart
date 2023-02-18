@@ -9,6 +9,7 @@ import 'package:hackniche/colors.dart' as color;
 import 'package:get/get.dart';
 
 import 'home_page.dart';
+import 'prescription_dr.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({Key? key}) : super(key: key);
@@ -134,7 +135,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         Padding(
                           padding: const EdgeInsets.only(left: 20, top: 20),
                           child: Text(
-                            'Login',
+                            'Register',
                             style: TextStyle(
                                 fontSize: 26,
                                 fontFamily: 'Poppins',
@@ -206,17 +207,17 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         SizedBox(
                           height: 8,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20.0),
-                          child: Text(
-                            'Forgot Password?',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Color(0xff00c9ff),
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: const EdgeInsets.only(left: 20.0),
+                        //   child: Text(
+                        //     'Forgot Password?',
+                        //     style: TextStyle(
+                        //         fontSize: 17,
+                        //         color: Color(0xff00c9ff),
+                        //         fontFamily: 'Poppins',
+                        //         fontWeight: FontWeight.w500),
+                        //   ),
+                        // ),
                         SizedBox(
                           height: 20,
                         ),
@@ -228,7 +229,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                             child: Center(
                               child: TextButton(
                                   onPressed: () {
-                                    Get.to(() => HomePage());
+                                    Get.to(() => Pres());
                                   }
                                   //  async {
                                   //   await
@@ -253,7 +254,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                                   // },
                                   ,
                                   child: Text(
-                                    'Login',
+                                    'Upload ID',
                                     style: TextStyle(
                                       fontSize: 21,
                                       color: Colors.white,
@@ -285,17 +286,17 @@ class _RegistrationPageState extends State<RegistrationPage> {
                           ),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 50,
                         ),
-                        Center(
-                          child: Text(
-                            'OR',
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 22,
-                                color: Color(0xFF8F9BB3)),
-                          ),
-                        ),
+                        // Center(
+                        //   child: Text(
+                        //     'OR',
+                        //     style: TextStyle(
+                        //         fontFamily: 'Poppins',
+                        //         fontSize: 22,
+                        //         color: Color(0xFF8F9BB3)),
+                        //   ),
+                        // ),
                         Center(
                           child: Text(
                             'Create Account',

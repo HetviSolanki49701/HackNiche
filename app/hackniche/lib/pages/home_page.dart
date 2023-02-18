@@ -14,6 +14,7 @@ import 'package:hackniche/pages/job_page.dart';
 import 'package:hackniche/pages/main_child.dart';
 import 'package:hackniche/pages/registration_page.dart';
 import 'package:hackniche/pages/schemes.dart';
+import 'package:hackniche/pages/silver_bar_chart.dart';
 import '../widgets/data.dart';
 import 'animated_drawer.dart';
 
@@ -113,12 +114,10 @@ class _HomePageState extends State<HomePage> {
                         Get.to(() => AnimatedDrawerPage());
                         if (index == 1) {
                           Get.to(() => JobHomePage());
-                        }
-                        // else if (index == 2) {
-                        //   print("2");
-                        //   Get.to(() => Prescription());
-                        // }
-                        else if (index == 3) {
+                        } else if (index == 2) {
+                          print("2");
+                          Get.to(() => ChartPage());
+                        } else if (index == 3) {
                           Get.to(() => Schemes());
                         } else if (index == 4) {
                           Get.to(() => MapScreen());
