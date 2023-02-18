@@ -9,12 +9,12 @@ import {
   DirectionsRenderer,
   InfoWindowF,
 } from "@react-google-maps/api";
-import stores from "../components/Stores";
+import schoolsData from "../components/SchoolData";
 // import stores from "../components/Stores";
 
 const center = { lat: 19.11, lng: 72.84 };
 
-const Maps = () => {
+const Schools = () => {
   const { isLoaded } = useJsApiLoader({
     // googleMapsApiKey: "AIzaSyD9VI4OdMbtz9zNyDdGWL-Q9dM_qv_hW_4",
     libraries: ["places"],
@@ -55,7 +55,7 @@ const Maps = () => {
     setDuration(results.routes[0].legs[0].duration.text);
   }
 
-  const locations = stores.results;
+  const locations = schoolsData.results;
 
   const onLoad = (infoWindow) => {
     console.log("infoWindow: ", infoWindow);
@@ -65,7 +65,7 @@ const Maps = () => {
     return (
       <div className="h-[86.2vh] w-full ml-3" onClick={goToLogin}>
         <div className="p-10 bg-[#2b343b] text-white text-5xl pl-16 font-bold">
-          Distribution Centers
+          Nearby Schools
         </div>
         {/* <div className="absolute w-5/12 my-5 ml-[30rem] bg-slate-100 p-7 rounded-md">
           <div className="flex">
@@ -138,4 +138,4 @@ const Maps = () => {
     );
 };
 
-export default Maps;
+export default Schools;
