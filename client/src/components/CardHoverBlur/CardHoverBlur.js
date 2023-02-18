@@ -1,5 +1,5 @@
 import React from 'react'
-import house1 from '../../assets/house1.jpg'
+import house1 from '../../assets/blog2.jpg'
 const CardHoverBlur = () => {
     return (
         <div className=''>

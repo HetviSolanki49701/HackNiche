@@ -21,7 +21,7 @@ const CardHover = (props) => {
               porro qui!
             </div>
           </div>
-          <a href="#">Avail Now</a>
+          <a href={props.link}>Avail Now</a>
         </div>
         <img src={props.img} alt="Bottle" className="bottle" />
       </div>
