@@ -5,8 +5,8 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:sliver_bar_chart/sliver_bar_chart.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class ChartPage extends StatelessWidget {
+  const ChartPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -110,43 +110,28 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   void _setupBarChartValues() {
     _barValues = [
       BarChartData(
-        x: '2014',
+        x: 'Deferred Annuity',
         y: 500.0,
         barColor: _getRandomColor(),
       ),
       BarChartData(
-        x: '2015',
+        x: 'NPS',
         y: 800.0,
         barColor: _getRandomColor(),
       ),
       BarChartData(
-        x: '2016',
+        x: 'Pension Funds',
         y: 600.0,
         barColor: _getRandomColor(),
       ),
       BarChartData(
-        x: '2017',
+        x: 'Life Annuity',
         y: 900.0,
         barColor: _getRandomColor(),
       ),
       BarChartData(
-        x: '2018',
+        x: 'Service Pension',
         y: 1000.0,
-        barColor: _getRandomColor(),
-      ),
-      BarChartData(
-        x: '2019',
-        y: 700.0,
-        barColor: _getRandomColor(),
-      ),
-      BarChartData(
-        x: '2020',
-        y: 500.0,
-        barColor: _getRandomColor(),
-      ),
-      BarChartData(
-        x: '2021',
-        y: 300.0,
         barColor: _getRandomColor(),
       ),
     ];
