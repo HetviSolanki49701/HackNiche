@@ -33,10 +33,11 @@ body::after{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
+  width: 90%;
   /* max-width: 1200px; */
   flex-wrap: wrap;
   z-index: 1;
+  /* height: 60%; */
 }
 
 .container .card {
@@ -59,7 +60,7 @@ body::after{
 
 .container .card .content {
   padding: 10px;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   text-align: center;
   transition: 0.5s;
   opacity: 1;
