@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'home_page.dart';
 
 class AppointmentUserSkills extends StatefulWidget {
   // String user;
@@ -38,7 +41,11 @@ class _AppointmentUserSkillsState extends State<AppointmentUserSkills> {
               style: TextStyle(fontSize: 24),
             ),
           ),
-          leading: Icon(Icons.arrow_back_ios),
+          leading: InkWell(
+              onTap: () {
+                Get.to(() => HomePage());
+              },
+              child: Icon(Icons.arrow_back_ios)),
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
           elevation: 0,

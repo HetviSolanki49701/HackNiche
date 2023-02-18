@@ -2,6 +2,8 @@
 
 import 'package:checkmark/checkmark.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hackniche/pages/home_page.dart';
 
 class Schemes extends StatefulWidget {
   const Schemes({super.key});
@@ -26,9 +28,14 @@ class _SchemesState extends State<Schemes> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 24.0, top: 40),
-                  child: Text(
-                    'Schemes',
-                    style: TextStyle(fontFamily: 'Poppins', fontSize: 30),
+                  child: InkWell(
+                    onTap: () {
+                      Get.to(() => HomePage());
+                    },
+                    child: Text(
+                      'Schemes',
+                      style: TextStyle(fontFamily: 'Poppins', fontSize: 30),
+                    ),
                   ),
                 ),
                 SizedBox(

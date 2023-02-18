@@ -3,11 +3,13 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../widgets/popular_doctors_user.dart';
 import '../widgets/populars_doctors_user.dart';
+import 'home_page.dart';
 
 class AddFriends extends StatefulWidget {
   const AddFriends({Key? key}) : super(key: key);
@@ -66,7 +68,7 @@ class _AddFriendsState extends State<AddFriends> {
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
-              Navigator.pop(context);
+              Get.to(() => HomePage());
             },
           ),
           centerTitle: true,
