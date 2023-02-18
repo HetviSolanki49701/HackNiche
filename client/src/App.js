@@ -14,7 +14,10 @@ import CardHoverBlur from "./components/CardHoverBlur/CardHoverBlur";
 import Relocate from "./pages/Relocate";
 import PensionMgmnt from "./pages/PensionMgmnt";
 import Consult from "./pages/Consult";
+import ChildCare from "./pages/_ChildCare";
+import HealthCare from "./pages/HealthCare";
 import Schools from "./pages/Schools";
+import HousePrice from "./components/HousePrice";
 function App() {
   return (
     <div className="App font-ourfont flex">
@@ -25,7 +28,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/schemes" element={<Schemes />} />
-          <Route path="/Blogs" element={<Blogs />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/maps" element={<Maps />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/postjobs" element={<PostJobs />} />
@@ -34,7 +37,10 @@ function App() {
           <Route path="/relocate" element={<Relocate />} />
           <Route path="/pension" element={<PensionMgmnt />} />
           <Route path="/consult" element={<Consult />} />
+          <Route path="/childcare" element={<ChildCare />} />
+          <Route path="/healthcare" element={<HealthCare />} />
           <Route path="/schools" element={<Schools />} />
+          <Route path="/houseprice" element={<HousePrice />} />
         </Routes>
       </Router>
     </div>
