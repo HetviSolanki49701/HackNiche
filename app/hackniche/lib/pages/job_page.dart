@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:hackniche/colors.dart' as color;
+import 'package:hackniche/pages/skill_teaching.dart';
 
 import '../widgets/recommended.dart';
 import '../widgets/work_categories.dart';
@@ -31,15 +33,20 @@ class JobHomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: color.AppColor.defaultPadding),
-                child: Container(
-                  alignment: Alignment.bottomLeft,
-                  child: Text(
-                    'Employment\nOppurtunities',
-                    style: TextStyle(
-                        fontSize: 30,
-                        color: color.AppColor.bgColor,
-                        fontWeight: FontWeight.w800),
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      alignment: Alignment.bottomLeft,
+                      child: Text(
+                        'Employment\nOppurtunities',
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: color.AppColor.bgColor,
+                            fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Padding(
@@ -89,10 +96,33 @@ class JobHomePage extends StatelessWidget {
                         horizontal: color.AppColor.defaultPadding),
                     child: Container(
                       alignment: Alignment.bottomLeft,
-                      child: Text(
-                        'See all',
-                        style: TextStyle(
-                            color: color.AppColor.bgColor, fontSize: 16),
+                      child: InkWell(
+                        onTap: () {
+                          showModalBottomSheet(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Container(
+                                  height: 200,
+                                  child: InkWell(
+                                      onTap: () {
+                                        Get.to(() => AppointmentUserSkills());
+                                      },
+                                      child: Center(
+                                          child: Text(
+                                        'Skill Teaching',
+                                        style: TextStyle(
+                                            fontSize: 30,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.bold),
+                                      ))),
+                                );
+                              });
+                        },
+                        child: Text(
+                          'See all',
+                          style: TextStyle(
+                              color: color.AppColor.bgColor, fontSize: 16),
+                        ),
                       ),
                     ),
                   ),

@@ -109,6 +109,7 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Icon(Icons.arrow_back_ios),
         title: Text("Nearby Distribution Centers"),
         backgroundColor: Color.fromARGB(255, 64, 255, 182),
       ),

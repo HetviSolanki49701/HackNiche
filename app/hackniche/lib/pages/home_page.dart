@@ -7,9 +7,13 @@ import 'package:get/get.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 import 'package:hackniche/colors.dart' as color;
+import 'package:hackniche/pages/addfriends.dart';
 import 'package:hackniche/pages/doctor_user.dart';
+import 'package:hackniche/pages/google_maps_page.dart';
 import 'package:hackniche/pages/job_page.dart';
 import 'package:hackniche/pages/main_child.dart';
+import 'package:hackniche/pages/registration_page.dart';
+import 'package:hackniche/pages/schemes.dart';
 import '../widgets/data.dart';
 import 'animated_drawer.dart';
 
@@ -113,13 +117,16 @@ class _HomePageState extends State<HomePage> {
                         // else if (index == 2) {
                         //   print("2");
                         //   Get.to(() => Prescription());
-                        // } else if (index == 3) {
-                        //   Get.to(() => MapScreen());
-                        // } else if (index == 4) {
-                        //   Get.to(() => FindArticle());
-                        // } else if (index == 5) {
-                        //   Get.to(() => CarPool());
-                        // } else if (index == 6) {
+                        // }
+                        else if (index == 3) {
+                          Get.to(() => Schemes());
+                        } else if (index == 4) {
+                          Get.to(() => MapScreen());
+                        } else if (index == 5) {
+                          Get.to(() => AddFriends());
+                        }
+                        //
+                        // else if (index == 6) {
                         //   Get.to(() => MyWidget());
                         // } else if (index == 7) {
                         //   Get.to(() => Dashboard());
@@ -255,7 +262,7 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
               ),
               onPressed: () {
-                // Get.to(() => AddFriends());
+                Get.to(() => RegistrationPage());
               },
             ),
             IconButton(
