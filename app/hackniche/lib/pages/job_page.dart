@@ -13,6 +13,7 @@ class JobHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: color.AppColor.bgColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -33,7 +34,7 @@ class JobHomePage extends StatelessWidget {
                 child: Container(
                   alignment: Alignment.bottomLeft,
                   child: Text(
-                    'Nimu Jobs\nfuck unemployment',
+                    'Employment\nOppurtunities',
                     style: TextStyle(fontSize: 30, color: Colors.white),
                   ),
                 ),
@@ -71,7 +72,7 @@ class JobHomePage extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        'Featured Jobs',
+                        'Available Openings :',
                         style: TextStyle(color: Colors.white, fontSize: 24),
                       ),
                     ),
@@ -92,81 +93,255 @@ class JobHomePage extends StatelessWidget {
               ),
               Container(
                 height: MediaQuery.of(context).size.height / 4,
-                width: MediaQuery.of(context).size.width / 1.06,
-                // width: 350,
-                decoration: BoxDecoration(
-                  color: color.AppColor.bgColor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: [
-                    Row(
+                width: 360,
+                child: ListView(scrollDirection: Axis.horizontal, children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height / 4,
+                    width: MediaQuery.of(context).size.width / 1.06,
+                    // width: 350,
+                    decoration: BoxDecoration(
+                      color: color.AppColor.bgColor2,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Column(
                       children: [
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: color.AppColor.defaultPadding,
-                              vertical: color.AppColor.defaultPadding - 8),
-                          child: CircleAvatar(
-                            radius: 30,
-                            backgroundImage:
-                                AssetImage('lib/images/person1.jpeg'),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: color.AppColor.defaultPadding,
-                          ),
-                          child: Text.rich(
-                            TextSpan(children: [
-                              TextSpan(
-                                text: 'Product Designer\n     ',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: color.AppColor.defaultPadding,
+                                  vertical: color.AppColor.defaultPadding - 8),
+                              child: CircleAvatar(
+                                radius: 30,
+                                backgroundImage:
+                                    AssetImage('lib/images/school3.jpeg'),
                               ),
-                              TextSpan(
-                                  text: '   NimuSoft Labs',
-                                  style: TextStyle(
-                                      color: Colors.white54, fontSize: 14))
-                            ]),
-                          ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: color.AppColor.defaultPadding,
+                              ),
+                              child: Text.rich(
+                                TextSpan(children: [
+                                  TextSpan(
+                                    text: '   Product Tester\n     ',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                  TextSpan(
+                                      text: 'NimuSoft Labs',
+                                      style: TextStyle(
+                                          color: Colors.white54, fontSize: 14))
+                                ]),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            WorkCategories(
+                              label: 'Full Time',
+                            ),
+                            WorkCategories(
+                              label: 'Design',
+                            ),
+                            WorkCategories(
+                              label: 'Junior',
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 22,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              'Delhi, India',
+                              style: TextStyle(
+                                  color: Colors.white60, fontSize: 16),
+                            ),
+                            Text(
+                              '\Rs.30,000/month',
+                              style: TextStyle(
+                                  color: Colors.white60, fontSize: 16),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 10,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height / 4,
+                    width: MediaQuery.of(context).size.width / 1.06,
+                    // width: 350,
+                    decoration: BoxDecoration(
+                      color: color.AppColor.bgColor2,
+                      borderRadius: BorderRadius.circular(15),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    child: Column(
                       children: [
-                        WorkCategories(
-                          label: 'Full Time',
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: color.AppColor.defaultPadding,
+                                  vertical: color.AppColor.defaultPadding - 8),
+                              child: CircleAvatar(
+                                radius: 30,
+                                backgroundImage:
+                                    AssetImage('lib/images/school1.jpeg'),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: color.AppColor.defaultPadding,
+                              ),
+                              child: Text.rich(
+                                TextSpan(children: [
+                                  TextSpan(
+                                    text: '         Analyst\n     ',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                  TextSpan(
+                                      text: 'Sanghvi Laboratory',
+                                      style: TextStyle(
+                                          color: Colors.white54, fontSize: 14))
+                                ]),
+                              ),
+                            ),
+                          ],
                         ),
-                        WorkCategories(
-                          label: 'Design',
+                        SizedBox(
+                          height: 10,
                         ),
-                        WorkCategories(
-                          label: 'Junior',
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            WorkCategories(
+                              label: 'Full Time',
+                            ),
+                            WorkCategories(
+                              label: 'Analyst',
+                            ),
+                            WorkCategories(
+                              label: 'Junior',
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 22,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              'Delhi, Mumbai',
+                              style: TextStyle(
+                                  color: Colors.white60, fontSize: 16),
+                            ),
+                            Text(
+                              'Rs.40,000/month',
+                              style: TextStyle(
+                                  color: Colors.white60, fontSize: 16),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 22,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height / 4,
+                    width: MediaQuery.of(context).size.width / 1.06,
+                    // width: 350,
+                    decoration: BoxDecoration(
+                      color: color.AppColor.bgColor2,
+                      borderRadius: BorderRadius.circular(15),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    child: Column(
                       children: [
-                        Text(
-                          'Dhaka, Bangladesh',
-                          style: TextStyle(color: Colors.white60, fontSize: 16),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: color.AppColor.defaultPadding,
+                                  vertical: color.AppColor.defaultPadding - 8),
+                              child: CircleAvatar(
+                                radius: 30,
+                                backgroundImage:
+                                    AssetImage('lib/images/school4.jpeg'),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: color.AppColor.defaultPadding,
+                              ),
+                              child: Text.rich(
+                                TextSpan(children: [
+                                  TextSpan(
+                                    text: '   Product Analyser\n     ',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                  TextSpan(
+                                      text: 'Synapse Laboratory',
+                                      style: TextStyle(
+                                          color: Colors.white54, fontSize: 14))
+                                ]),
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          '\$1600/year',
-                          style: TextStyle(color: Colors.white60, fontSize: 16),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            WorkCategories(
+                              label: 'Full Time',
+                            ),
+                            WorkCategories(
+                              label: 'Design',
+                            ),
+                            WorkCategories(
+                              label: 'Junior',
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 22,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              'India, Mumbai',
+                              style: TextStyle(
+                                  color: Colors.white60, fontSize: 16),
+                            ),
+                            Text(
+                              'Rs.16000/month',
+                              style: TextStyle(
+                                  color: Colors.white60, fontSize: 16),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
+                  ),
+                ]),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -177,7 +352,7 @@ class JobHomePage extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        'Recomended Jobs',
+                        'Applied Jobs',
                         style: TextStyle(color: Colors.white, fontSize: 24),
                       ),
                     ),
@@ -209,17 +384,17 @@ class JobHomePage extends StatelessWidget {
                       );
                     },
                     child: RecommendCard(
-                      imgSrc: 'lib/images/person2.jpeg',
-                      company: 'Google',
-                      jobName: 'UX Designer',
-                      salary: '\$1600/year',
+                      imgSrc: 'lib/images/school5.jpeg',
+                      company: 'Army School',
+                      jobName: 'Teacher',
+                      salary: 'Rs.30,000/month',
                     ),
                   ),
                   RecommendCard(
-                    imgSrc: 'lib/images/person3.jpeg',
+                    imgSrc: 'lib/images/school7.jpeg',
                     company: 'Facebook',
                     jobName: 'Engineer',
-                    salary: '\$1900/year',
+                    salary: 'Rs.19000/month',
                   ),
                 ],
               ),

@@ -80,7 +80,7 @@ class _MyCardsPageState extends State<MyCardsPage>
       appBar: AppBar(
         title: Center(
             child: Text(
-          'Donate Page',
+          'Donate Money',
           style: TextStyle(
               color: Colors.black,
               fontSize: 28,

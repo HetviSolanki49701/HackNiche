@@ -64,6 +64,8 @@ dependencies:
   checkmark: ^0.0.2+1
   mobile_scanner: ^3.0.0
   slide_to_act: ^2.0.1
+  card_stack_widget: ^0.1.5
+  url_launcher: ^6.1.9
 
 dev_dependencies:
   flutter_test:
