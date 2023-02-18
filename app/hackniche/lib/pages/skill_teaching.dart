@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AppointmentUser extends StatefulWidget {
+class AppointmentUserSkills extends StatefulWidget {
   // String user;
   // String doctorName;
   // String fullName;
@@ -22,10 +22,10 @@ class AppointmentUser extends StatefulWidget {
   //     // required this.speciality
   //     });
   @override
-  State<AppointmentUser> createState() => _AppointmentUserState();
+  State<AppointmentUserSkills> createState() => _AppointmentUserSkillsState();
 }
 
-class _AppointmentUserState extends State<AppointmentUser> {
+class _AppointmentUserSkillsState extends State<AppointmentUserSkills> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -45,7 +45,7 @@ class _AppointmentUserState extends State<AppointmentUser> {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(top: 15.0),
+            padding: const EdgeInsets.only(top: 35.0),
             child: Column(
               children: [
                 SizedBox(
@@ -117,11 +117,11 @@ class _AppointmentUserState extends State<AppointmentUser> {
                   ],
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Container(
                   padding: EdgeInsets.only(left: 15, top: 7),
-                  height: 175,
+                  height: 225,
                   width: 320,
                   decoration: BoxDecoration(
                       color: Color(0xFFD7DEEA),
@@ -135,7 +135,7 @@ class _AppointmentUserState extends State<AppointmentUser> {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 40,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 0.0),
@@ -153,38 +153,38 @@ class _AppointmentUserState extends State<AppointmentUser> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                    padding: const EdgeInsets.only(left: 40.0),
-                    child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 310,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                              color: Color(0xFF1C6BA4),
-                            ),
-                            child: Center(
-                                child: TextButton(
-                              onPressed: () async {
-                                String url =
-                                    "https://meet.jit.si/MathematicalDiversitiesTranslateInstead";
-                                Uri uri = Uri.parse(url);
-                                await launchUrl(uri,
-                                    mode: LaunchMode.externalApplication);
-                              },
-                              child: Text(
-                                'Consult Now',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 22),
-                              ),
-                            )),
-                          )
-                        ])),
+                // SizedBox(
+                //   height: 30,
+                // ),
+                // Padding(
+                //     padding: const EdgeInsets.only(left: 40.0),
+                //     child: Row(
+                //         crossAxisAlignment: CrossAxisAlignment.start,
+                //         children: [
+                //           Container(
+                //             width: 310,
+                //             height: 60,
+                //             decoration: BoxDecoration(
+                //               borderRadius: BorderRadius.circular(40),
+                //               color: Color(0xFF1C6BA4),
+                //             ),
+                //             child: Center(
+                //                 child: TextButton(
+                //               onPressed: () async {
+                //                 String url =
+                //                     "https://meet.jit.si/MathematicalDiversitiesTranslateInstead";
+                //                 Uri uri = Uri.parse(url);
+                //                 await launchUrl(uri,
+                //                     mode: LaunchMode.externalApplication);
+                //               },
+                //               child: Text(
+                //                 'Consult Now',
+                //                 style: TextStyle(
+                //                     color: Colors.white, fontSize: 22),
+                //               ),
+                //             )),
+                //           )
+                //         ])),
               ],
             ),
           ),

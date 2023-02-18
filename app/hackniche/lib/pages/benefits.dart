@@ -3,14 +3,14 @@
 import 'package:checkmark/checkmark.dart';
 import 'package:flutter/material.dart';
 
-class Schemes extends StatefulWidget {
-  const Schemes({super.key});
+class Benefits extends StatefulWidget {
+  const Benefits({super.key});
 
   @override
-  State<Schemes> createState() => _SchemesState();
+  State<Benefits> createState() => _BenefitsState();
 }
 
-class _SchemesState extends State<Schemes> {
+class _BenefitsState extends State<Benefits> {
   bool checked = false;
   @override
   Widget build(BuildContext context) {
@@ -27,12 +27,12 @@ class _SchemesState extends State<Schemes> {
                 Padding(
                   padding: const EdgeInsets.only(left: 24.0, top: 40),
                   child: Text(
-                    'Schemes',
+                    'Benefits',
                     style: TextStyle(fontFamily: 'Poppins', fontSize: 30),
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
@@ -83,17 +83,17 @@ class _SchemesState extends State<Schemes> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Agniveer Yojana',
+                                    'Raksha Mantri Fund',
                                     style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w500),
                                   ),
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Text('20% Pension Returns',
+                                  Text('20% Cut on Tuition Fee',
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 14,
@@ -298,8 +298,8 @@ class _SchemesState extends State<Schemes> {
                               height: 100,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
-                                      image: AssetImage(
-                                          'lib/images/benefits2.png'),
+                                      image:
+                                          AssetImage('lib/images/scheme1.jpeg'),
                                       fit: BoxFit.fitHeight),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
@@ -314,7 +314,7 @@ class _SchemesState extends State<Schemes> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Sarkari Yojana',
+                                    'Agniveer Scheme',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 20,
@@ -397,7 +397,7 @@ class _SchemesState extends State<Schemes> {
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image:
-                                          AssetImage('lib/images/images.png'),
+                                          AssetImage('lib/images/scheme3.png'),
                                       fit: BoxFit.fitHeight),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
@@ -422,7 +422,7 @@ class _SchemesState extends State<Schemes> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Text('50% Cut on Taxes',
+                                  Text('50% Cut on Tuition Fee',
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 14,
@@ -492,8 +492,8 @@ class _SchemesState extends State<Schemes> {
                               height: 100,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
-                                      image: AssetImage(
-                                          'lib/images/benefits4.jpeg'),
+                                      image:
+                                          AssetImage('lib/images/scheme2.png'),
                                       fit: BoxFit.fitHeight),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
