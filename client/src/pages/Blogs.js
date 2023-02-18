@@ -8,7 +8,7 @@ const Blogs = () => {
     return (
         <div className='bg-[url("assets/blobBg.svg")] bg-no-repeat bg-cover min-h-screen h-full'>
         <div className='pb-16'>
-            <div className='text-center text-4xl py-8 font-bold '>
+            <div className='text-center text-4xl pt-12 pb-4 font-bold '>
                 Blogs
             </div>
             <Blog img={blog3} heading="Blog1" />
