@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hackniche/pages/appoinment_user.dart';
 
-import '../widgets/popular_doctors_user.dart';
+import '../widgets/populars_doctors_user.dart';
 
 class DoctorUser extends StatefulWidget {
   const DoctorUser({Key? key}) : super(key: key);
