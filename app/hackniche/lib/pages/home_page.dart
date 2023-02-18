@@ -1,13 +1,17 @@
 // ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, import_of_legacy_library_into_null_safe, prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, unused_import, prefer_interpolation_to_compose_strings, unnecessary_cast
 
+import 'package:animated_drawer/views/animated_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 import 'package:hackniche/colors.dart' as color;
+import 'package:hackniche/pages/doctor_user.dart';
+import 'package:hackniche/pages/job_page.dart';
 import 'package:hackniche/pages/main_child.dart';
 import '../widgets/data.dart';
+import 'animated_drawer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -102,10 +106,11 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () {
-                        Get.to(() => MainChild());
-                        // if (index == 1) {
-                        //   Get.to(() => EcoFriendly());
-                        // } else if (index == 2) {
+                        Get.to(() => AnimatedDrawerPage());
+                        if (index == 1) {
+                          Get.to(() => JobHomePage());
+                        }
+                        // else if (index == 2) {
                         //   print("2");
                         //   Get.to(() => Prescription());
                         // } else if (index == 3) {

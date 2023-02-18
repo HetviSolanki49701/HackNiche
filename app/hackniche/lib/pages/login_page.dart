@@ -8,6 +8,8 @@ import 'get_started.dart';
 import 'package:hackniche/colors.dart' as color;
 import 'package:get/get.dart';
 
+import 'home_page.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -225,7 +227,9 @@ class _LoginPageState extends State<LoginPage> {
                             width: 280,
                             child: Center(
                               child: TextButton(
-                                  onPressed: () {}
+                                  onPressed: () {
+                                    Get.to(() => HomePage());
+                                  }
                                   //  async {
                                   //   await
                                   //   // getData();

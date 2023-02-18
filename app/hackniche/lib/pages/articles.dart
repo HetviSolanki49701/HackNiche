@@ -7,6 +7,7 @@ import 'package:hackniche/colors.dart' as color;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:hackniche/pages/home_page.dart';
 import 'package:http/http.dart';
 
 class FindArticle extends StatefulWidget {
@@ -50,7 +51,7 @@ class _FindArticleState extends State<FindArticle> {
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
-              Get.to(() => {});
+              Get.to(() => HomePage());
             },
           ),
           title: Padding(

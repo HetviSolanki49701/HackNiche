@@ -1,29 +1,21 @@
 // ignore: unused_import
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, unused_import, duplicate_ignore, avoid_print, prefer_const_constructors_in_immutables, unused_local_variable
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, unused_import, duplicate_ignore, avoid_print
 
-import 'dart:convert';
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-import '../pages/addfriends.dart';
-import '../pages/home_page.dart';
+import '../pages/appoinment_user.dart';
 
-class PopularCard extends StatefulWidget {
-  // final String uid;
-  // final String token;
+class PopularCardUser extends StatelessWidget {
   final String doctorName;
   final String image2;
   final Color color1;
   final String text3;
   final String disease1;
 
-  PopularCard({
-    // required this.uid,
-    // required this.token,
+  PopularCardUser({
     required this.doctorName,
     required this.color1,
     required this.disease1,
@@ -32,40 +24,23 @@ class PopularCard extends StatefulWidget {
   });
 
   @override
-  State<PopularCard> createState() => _PopularCardState();
-}
-
-class _PopularCardState extends State<PopularCard> {
-  // late String tokenValue;
-
-  // bool isloading = true;
-
-  // void addFriend() async {
-  //   print(widget.uid);
-  //   var res = await post(Uri.parse("http://192.168.250.220:5000/addFriend"),
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         "auth-token": widget.token,
-  //       },
-  //       body: jsonEncode({"id": widget.uid}));
-  //   if (res.statusCode == 200) {
-  //     var data = jsonDecode(res.body);
-  //     Get.to(() => HomePage());
-  //   } else {
-  //     throw "Error";
-  //   }
-  // }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        // print(user);
+        // print(doc);
+        // Navigator.of(context).push(MaterialPageRoute(
+        //     builder: (context) => AppointmentUser(
+        //           user: user!,
+        //           doctorName: doc.toLowerCase(),
+        //           fullName: doctorName,
+        //           speciality: disease1,
+        //           img: image2,
+        //           rating: text3,
+        //         ),
+        //         ),
+        //         );
+      },
       child: Padding(
         padding: const EdgeInsets.only(left: 0.0),
         child: Row(
@@ -73,10 +48,10 @@ class _PopularCardState extends State<PopularCard> {
           children: [
             Container(
               width: 360,
-              height: 140,
+              height: 130,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: widget.color1,
+                color: color1,
               ),
               child: Row(
                 children: [
@@ -87,8 +62,7 @@ class _PopularCardState extends State<PopularCard> {
                       height: 120,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage(widget.image2),
-                              fit: BoxFit.cover),
+                              image: AssetImage(image2), fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(30)),
                     ),
                   ),
@@ -102,18 +76,30 @@ class _PopularCardState extends State<PopularCard> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          widget.doctorName,
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500),
+                        InkWell(
+                          onTap: () {
+                            Get.to(() => AppointmentUser(
+                                  doctorName: 'Dr. Ayush',
+                                  img: 'lib/images/doctor16.png',
+                                  fullName: 'Dr. Ayush Shah',
+                                  rating: '4.5 (5 Reviews)',
+                                  speciality: 'Psychologist',
+                                  user: 'Vinit',
+                                ));
+                          },
+                          child: Text(
+                            doctorName,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500),
+                          ),
                         ),
                         SizedBox(
                           height: 0,
                         ),
-                        Text(widget.disease1,
+                        Text(disease1,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 12,
@@ -135,24 +121,11 @@ class _PopularCardState extends State<PopularCard> {
                               width: 10,
                             ),
                             Text(
-                              widget.text3,
+                              text3,
                               style: TextStyle(fontSize: 14),
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: 0,
-                        ),
-                        Row(
-                          children: [
-                            IconButton(
-                                onPressed: () {
-                                  AddFriends();
-                                },
-                                icon: Icon(Icons.add)),
-                            Icon(Icons.supervised_user_circle_rounded),
-                          ],
-                        )
                       ],
                     ),
                   ),

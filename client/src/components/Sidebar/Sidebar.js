@@ -1,90 +1,90 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
-
+import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
-  const [selected, setSelected] = useState("Home");
-
+  const [selected, setSelected] = useState("Child-Care");
+  const navigate = useNavigate();
   return (
     <div className="sideBody">
       <div className="navigation">
         <ul>
           <li
-            className={`list ${selected === "Home" && "active"}`}
+            className={`list ${selected === "Child-Care" && "active"}`}
             onClick={() => {
-              setSelected("Home");
+              setSelected("Child-Care");
             }}
           >
-            <Link to="/">
+            <Link to="/childcare">
               <span className="icon">
-                <ion-icon name="home-outline"></ion-icon>
+              <ion-icon name="heart-outline"></ion-icon>
               </span>
-              <span className="title">Home</span>
+              <span className="title">Child-Care</span>
             </Link>
           </li>
           <li
-            className={`list ${selected === "Profile" && "active"}`}
+            className={`list ${selected === "Health-Care" && "active"}`}
             onClick={() => {
-              setSelected("Profile");
+              setSelected("Health-Care");
             }}
           >
-            <Link to="/profile">
+            <Link to="/healthcare">
               <span className="icon">
-                <ion-icon name="person-outline"></ion-icon>
+              <ion-icon name="medkit-outline"></ion-icon>
               </span>
-              <span className="title">Profile</span>
+              <span className="title">Health-Care</span>
             </Link>
           </li>
           <li
-            className={`list ${selected === "Messages" && "active"}`}
+            className={`list ${selected === "Jobs" && "active"}`}
             onClick={() => {
-              setSelected("Messages");
+              setSelected("Jobs");
             }}
           >
-            <Link to="/profile">
+            <Link to="/jobs">
               <span className="icon">
-                <ion-icon name="chatbubbles-outline"></ion-icon>
+              <ion-icon name="briefcase-outline"></ion-icon>
               </span>
-              <span className="title">Messages</span>
+              <span className="title">Jobs</span>
             </Link>
           </li>
           <li
-            className={`list ${selected === "Settings" && "active"}`}
+            className={`list ${selected === "Pension Management" && "active"}`}
             onClick={() => {
-              setSelected("Settings");
+              setSelected("Pension Management");
             }}
           >
-            <Link to="/profile">
+            <Link to="/pension">
               <span className="icon">
-                <ion-icon name="chatbubbles-outline"></ion-icon>
+                <ion-icon name="cash-outline"></ion-icon>
               </span>
-              <span className="title">Settings</span>
+              <span className="title">Pension Management</span>
             </Link>
           </li>
           <li
-            className={`list ${selected === "Help" && "active"}`}
+            className={`list ${selected === "Schemes" && "active"}`}
             onClick={() => {
-              setSelected("Help");
+              setSelected("Schemes");
             }}
           >
-            <Link to="/profile">
+            <Link to="/schemes">
               <span className="icon">
-                <ion-icon name="help-outline"></ion-icon>
+              <ion-icon name="book-outline"></ion-icon>
               </span>
-              <span className="title">Help</span>
+              <span className="title">Schemes</span>
             </Link>
           </li>
           <li
-            className={`list ${selected === "Password" && "active"}`}
+            className={`list ${selected === "Relocate" && "active"}`}
             onClick={() => {
-              setSelected("Password");
+              setSelected("Relocate");
             }}
           >
-            <Link to="/profile">
+            <Link to="/relocationpage">
               <span className="icon">
-                <ion-icon name="lock-closed-outline"></ion-icon>
+                <ion-icon name="location-outline"></ion-icon>
               </span>
-              <span className="title">Password</span>
+              <span className="title">Relocate</span>
             </Link>
           </li>
           <li
@@ -93,7 +93,7 @@ const Sidebar = () => {
               setSelected("signout");
             }}
           >
-            <Link to="/profile">
+            <Link to="/login">
               <span className="icon">
                 <ion-icon name="log-out-outline"></ion-icon>
               </span>

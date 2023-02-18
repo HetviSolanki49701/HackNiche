@@ -14,9 +14,12 @@ import CardHoverBlur from "./components/CardHoverBlur/CardHoverBlur";
 import Relocate from "./pages/Relocate";
 import PensionMgmnt from "./pages/PensionMgmnt";
 import Consult from "./pages/Consult";
+import ChildCare from "./pages/_ChildCare";
+import HealthCare from "./pages/HealthCare";
 import Schools from "./pages/Schools";
 import HousePrice from "./components/HousePrice";
 import { useEffect, useState } from "react";
+import RelocationPage from "./pages/RelocationPage";
 function App() {
 
   const [me, setMe] = useState(false);
@@ -31,7 +34,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/schemes" element={<Schemes />} />
-          <Route path="/Blogs" element={<Blogs />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/maps" element={<Maps />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/postjobs" element={<PostJobs />} />
@@ -42,6 +45,9 @@ function App() {
           <Route path="/consult" element={<Consult />} />
           <Route path="/schools" element={<Schools />} />
           <Route path="/houseprice" element={<HousePrice />} />
+          <Route path="/relocationpage" element={<RelocationPage />} />
+          <Route path="/childcare" element={<ChildCare />} />
+          <Route path="/healthcare" element={<HealthCare />} />
         </Routes>
       </Router>
     </div>

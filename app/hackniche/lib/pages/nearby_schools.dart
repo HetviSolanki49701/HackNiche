@@ -7,8 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hackniche/colors.dart' as color;
+import 'package:hackniche/pages/benefits.dart';
 import '../widgets/doctor_card.dart';
 import 'home_page.dart';
+import 'main_child.dart';
 
 class DoctorSoldier extends StatefulWidget {
   const DoctorSoldier({Key? key}) : super(key: key);
@@ -331,9 +333,11 @@ class _DoctorSoldierState extends State<DoctorSoldier> {
                     if (index == 1) {
                       Get.to(() => DoctorSoldier());
                     } else if (index == 2) {
-                      Get.to(() => AnimatedDrawer());
+                      Get.to(() => Benefits());
                     } else if (index == 3) {
                       Get.to(() => HomePage());
+                    } else if (index == 0) {
+                      Get.to(() => MainChild());
                     }
                   });
                 },
@@ -430,14 +434,14 @@ class _DoctorSoldierState extends State<DoctorSoldier> {
   List<IconData> listOfIcons = [
     Icons.home_rounded,
     Icons.favorite_rounded,
-    Icons.settings_rounded,
+    Icons.account_balance_outlined,
     Icons.person_rounded,
   ];
 
   List<String> listOfStrings = [
     'Fitness',
-    'Therapy',
-    'Settings',
-    'Account',
+    'Schools',
+    'Benefits',
+    'Blogs',
   ];
 }

@@ -6,7 +6,9 @@ import 'package:hackniche/pages/animated_drawer.dart';
 import 'package:hackniche/pages/jobs_detail.dart';
 import 'package:hackniche/pages/login_page.dart';
 import 'package:hackniche/pages/main_child.dart';
+import 'package:hackniche/pages/silver_bar_chart.dart';
 
+import 'pages/addfriends.dart';
 import 'pages/articles.dart';
 import 'pages/benefits.dart';
 import 'pages/nearby_schools.dart';

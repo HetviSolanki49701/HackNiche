@@ -6,7 +6,9 @@ import 'package:animated_drawer/views/animated_drawer.dart';
 import 'package:get/get.dart';
 import 'package:hackniche/colors.dart' as color;
 import 'package:flutter/material.dart';
+import 'package:hackniche/pages/education.dart';
 import 'package:hackniche/pages/home_page.dart';
+import 'package:hackniche/pages/nearby_schools.dart';
 
 import 'animated_drawer.dart';
 import 'main_child.dart';
@@ -30,14 +32,16 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
         shadowYValue: 90,
         shadowAngle: -0.275,
         shadowSpeed: 550,
-        openIcon: Icon(Icons.menu_open, color: Color(0xFF1f186f)),
-        closeIcon: Icon(Icons.arrow_back_ios, color: Color(0xFF1f186f)),
+        openIcon:
+            Icon(Icons.menu_open, color: Color(0xFF1f186f).withOpacity(.1)),
+        closeIcon: Icon(Icons.arrow_back_ios,
+            color: Color(0xFF1f186f).withOpacity(.1)),
         shadowColor: Color.fromARGB(255, 195, 193, 209),
         backgroundGradient: LinearGradient(
           colors: [Color(0xFF4c41a3), Color.fromARGB(255, 195, 193, 209)],
         ),
         menuPageContent: Padding(
-          padding: const EdgeInsets.only(top: 200.0, left: 15),
+          padding: const EdgeInsets.only(top: 160.0, left: 15),
           child: Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,18 +69,51 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 40),
+                  padding: EdgeInsets.only(bottom: 60),
                 ),
                 Text(
-                  "Child Care",
-                  style: TextStyle(color: Colors.white, fontSize: 24),
+                  "Child Care :",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 28,
+                    fontFamily: 'Poppins',
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 24),
                 ),
-                Text(
-                  "Home Page",
-                  style: TextStyle(color: Colors.white, fontSize: 24),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => EducationalVideo());
+                  },
+                  child: Text(
+                    "Educational Videos",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 24),
+                ),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => DoctorSoldier());
+                  },
+                  child: Text(
+                    "Nearby Schools",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 24),
+                ),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => HomePage());
+                  },
+                  child: Text(
+                    "HomePage",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 20),

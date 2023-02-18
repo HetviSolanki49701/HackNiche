@@ -1,11 +1,11 @@
 import React from "react";
-// import house1 from '../../assets/house1.jpg'
+import house1 from '../../assets/house1.jpg'
 const CardHoverBlur = () => {
   return (
     <div className="">
       <div class="relative overflow-hidden bg-no-repeat bg-cover shadow-md rounded-lg bg-white/80">
         <img
-          //   src={house1}
+            src={house1}
           className=" hover:scale-110 transition duration-300 ease-in-out "
           alt="Louvre"
         />

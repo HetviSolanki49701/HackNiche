@@ -13,7 +13,7 @@ class JobHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: color.AppColor.bgColor,
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -35,7 +35,10 @@ class JobHomePage extends StatelessWidget {
                   alignment: Alignment.bottomLeft,
                   child: Text(
                     'Employment\nOppurtunities',
-                    style: TextStyle(fontSize: 30, color: Colors.white),
+                    style: TextStyle(
+                        fontSize: 30,
+                        color: color.AppColor.bgColor,
+                        fontWeight: FontWeight.w800),
                   ),
                 ),
               ),
@@ -73,7 +76,10 @@ class JobHomePage extends StatelessWidget {
                       alignment: Alignment.bottomLeft,
                       child: Text(
                         'Available Openings :',
-                        style: TextStyle(color: Colors.white, fontSize: 24),
+                        style: TextStyle(
+                            color: color.AppColor.bgColor,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -85,7 +91,8 @@ class JobHomePage extends StatelessWidget {
                       alignment: Alignment.bottomLeft,
                       child: Text(
                         'See all',
-                        style: TextStyle(color: Colors.white54, fontSize: 16),
+                        style: TextStyle(
+                            color: color.AppColor.bgColor, fontSize: 16),
                       ),
                     ),
                   ),
@@ -353,7 +360,10 @@ class JobHomePage extends StatelessWidget {
                       alignment: Alignment.bottomLeft,
                       child: Text(
                         'Applied Jobs',
-                        style: TextStyle(color: Colors.white, fontSize: 24),
+                        style: TextStyle(
+                            color: color.AppColor.bgColor,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
