@@ -15,6 +15,7 @@ import Relocate from "./pages/Relocate";
 import PensionMgmnt from "./pages/PensionMgmnt";
 import Consult from "./pages/Consult";
 import Schools from "./pages/Schools";
+import HousePrice from "./components/HousePrice";
 function App() {
   return (
     <div className="App font-ourfont flex">
@@ -35,6 +36,7 @@ function App() {
           <Route path="/pension" element={<PensionMgmnt />} />
           <Route path="/consult" element={<Consult />} />
           <Route path="/schools" element={<Schools />} />
+          <Route path="/houseprice" element={<HousePrice />} />
         </Routes>
       </Router>
     </div>
