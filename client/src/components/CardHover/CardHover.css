@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: top;
-    min-height: 100vh;
+    min-height: 50vh;
    
 }
 
@@ -31,7 +31,7 @@
 }
 
 #logo{
-    --clr:#6dc9b8;
+    --clr:#6dc9b86f;
 }
 
 .main .card .circle{
@@ -54,7 +54,7 @@
     width: 350px;
     height: 350px;
     border-radius: 10%;
-    background: #6dc9b8;
+    background: #6dc9b898;
     border: 8px solid var(--clr);
     filter: drop-shadow(0 0 2px var(--clr)) drop-shadow(0 0 20px var(--clr));
     transition: 0.5s, background 0.5s;

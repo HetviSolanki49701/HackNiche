@@ -16,6 +16,8 @@ import PensionMgmnt from "./pages/PensionMgmnt";
 import Consult from "./pages/Consult";
 import ChildCare from "./pages/_ChildCare";
 import HealthCare from "./pages/HealthCare";
+import Schools from "./pages/Schools";
+import HousePrice from "./components/HousePrice";
 function App() {
   return (
     <div className="App font-ourfont flex">
@@ -37,6 +39,8 @@ function App() {
           <Route path="/consult" element={<Consult />} />
           <Route path="/childcare" element={<ChildCare />} />
           <Route path="/healthcare" element={<HealthCare />} />
+          <Route path="/schools" element={<Schools />} />
+          <Route path="/houseprice" element={<HousePrice />} />
         </Routes>
       </Router>
     </div>

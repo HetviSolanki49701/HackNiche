@@ -4,7 +4,7 @@ import 'package:animated_drawer/views/animated_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hackniche/pages/doctor_user.dart';
+import 'package:hackniche/pages/nearby_schools.dart';
 import 'package:hackniche/pages/get_started.dart';
 import 'package:hackniche/pages/home_page.dart';
 import 'package:hackniche/colors.dart' as color;
@@ -49,7 +49,7 @@ class _MainChildState extends State<MainChild> {
                 currentIndex = index;
                 HapticFeedback.lightImpact();
                 if (index == 1) {
-                  Get.to(() => DoctorUser());
+                  Get.to(() => DoctorSoldier());
                 } else if (index == 2) {
                   Get.to(() => AnimatedDrawer());
                 } else if (index == 3) {
